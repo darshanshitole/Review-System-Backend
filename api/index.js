@@ -12,6 +12,13 @@ app.use(express.json());
 //mounting api routes
 app.use("/api/v1",router)
 
+app.get('/',(req,res)=>{
+  res.json({
+    success:true,
+    message:"Server is running"
+  })
+});
+
 dotenv.config();
 
 dbConnect();
